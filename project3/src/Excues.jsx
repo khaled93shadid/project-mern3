@@ -4,7 +4,7 @@ import axios from 'axios'
 export const Excues = () => {
   const [excuse,setexcuse]=useState('')
   const [category,setcategory]=useState('')
-  const getData=async()=>{
+  const getData=async(category)=>{
 
     const res =await axios.get(`https://excuser-three.vercel.app/v1/excuse/office/${category}`)
     setexcuse(res.data[0].excuse)
